@@ -25,12 +25,12 @@ Usage
 -----
 
 To use this client with the Keen IO API, you have to configure your Keen IO Project ID and its access
-keys (if you need an account, `sign up here <https://keen.io/>`_ - it's free).
+keys (if you need an account, `request a demo <https://try.keen.io/contact/>`_).
 
 Setting a write key is required for publishing events. Setting a read key is required for
 running queries. The recommended way to set this configuration information is via the environment.
 The keys you can set are `KEEN_PROJECT_ID`, `KEEN_WRITE_KEY`, `KEEN_READ_KEY`, and `KEEN_MASTER_KEY`.
-As per the `Principle of Least Privilege <https://en.wikipedia.org/wiki/Principle_of_least_privilege>`_, it's recommended that you not use the master_key if not 
+As per the `Principle of Least Privilege <https://en.wikipedia.org/wiki/Principle_of_least_privilege>`_, it's recommended that you not use the master_key if not
 necessary. This SDK will expect and use the precise key for a given operation, and throw an
 exception in cases of misuse.
 
@@ -377,7 +377,7 @@ You can manage your `saved queries <https://keen.io/docs/api/?shell#saved-querie
     # NOTE : Updating Saved Queries requires sending the entire query definition. Any attribute not
     # sent is interpreted as being cleared/removed. This means that properties set via another
     # client, including the Projects Explorer Web UI, will be lost this way.
-    # 
+    #
     # The update() function makes this easier by allowing client code to just specify the
     # properties that need updating. To do this, it will retrieve the existing query definition
     # first, which means there will be two HTTP requests. Use update_full() in code that already
@@ -416,7 +416,7 @@ Cached Datasets
     client = KeenClient(
         project_id="xxxx",  # your project ID
         read_key="zzzz",
-        master_key="abcd" 
+        master_key="abcd"
     )
 
     # Create a Cached Dataset
@@ -626,7 +626,7 @@ The Python client enables the creation and manipulation of `Access Keys <https:/
 Create Scoped Keys (**Deprecated**)
 '''''''''''''''''''''''''''''''''''
 
-The Python client enables you to create `Scoped Keys <https://keen.io/docs/security/#scoped-key>`_ easily, but Access Keys are better! 
+The Python client enables you to create Scoped Keys easily, but Access Keys are better!
 If you need to use them anyway, for legacy reasons, here's how:
 
 .. code-block:: python
@@ -667,7 +667,7 @@ report them via Github `Issues <./issues>`_. We'd love to hear your feedback and
 Contributing
 ------------
 
-This is an open source project and we love involvement from the community! Hit us up with pull requests and issues. 
+This is an open source project and we love involvement from the community! Hit us up with pull requests and issues.
 
 `Learn more about contributing to this project <./CONTRIBUTING.md>`_.
 
@@ -675,6 +675,6 @@ This is an open source project and we love involvement from the community! Hit u
     :target: http://travis-ci.org/keenlabs/KeenClient-Python
     :alt: Build status
 
-.. |pypi-version| image:: https://img.shields.io/pypi/v/keen.svg?maxAge=600 
+.. |pypi-version| image:: https://img.shields.io/pypi/v/keen.svg?maxAge=600
     :target: https://pypi.python.org/pypi/keen/
     :alt: Keen on PyPI
